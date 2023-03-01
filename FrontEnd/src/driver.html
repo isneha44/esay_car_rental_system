@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Rental System | Driver Screen</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/customer.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Start Driver screen -->
+    <header id="header" class="fixed-top" style="background-color: black;">
+        <div class="container d-flex align-items-center justify-content-between">
+    
+          <h1 class="logo"><a href="index.html">Easy Car Rental</a></h1>
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto " href="admin.html" id=">Vehicle Zone</a></li>
+              <li><a class="nav-link scrollto>" href="customerDetails.html" id="">Customer Details</a></li>
+              <li><a class="nav-link scrollto active" href="driver.html" id="">Drivers</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+
+    <!-- Start Driver manage form -->
+      <div class="container-fluid" id="Vehicle">
+        <section id="hero">
+          <div class="hero-container">
+              <div class="row mt-1" >
+                  <h1 class="" style="font-size: 30px; text-align: center; left: 934px; padding-top: 8px;"><b>Manage <span>Drivers</span></b></h1>
+                  <div class="row mt-1" id="customerform">
+                        <div class="col-xl-5">
+                            <div class="bg-white card">
+
+                                <div class="card-header text-white" style="font-size: 20px; background: #e43c5c">
+                                    Drivers Form
+                                </div>
+
+                                <div class="card-body bg-white text-dark">
+                                    <div class="row p-2">
+                                        <div class="form-group col-12">
+                                            <lable>Driver ID :</lable>
+                                            <input type="text" id="txtdriverID" class="form-control">
+                                            <span class="control-error" id="lbldriverID"></span>
+                                        </div>
+
+                                        <div class="form-group col-12">
+                                            <lable>Name :</lable>
+                                            <input type="text" id="txtname" class="form-control" >
+                                            <span class="control-error" id="lblname"></span>
+                                        </div>
+
+                                        <div class="form-group col-12">
+                                            <lable>Address :</lable>
+                                            <input type="text" id="txtaddress" class="form-control" >
+                                            <span class="control-error" id="lbladdress"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row p-2 mt-0">
+                                        <div class="form-group col-12">
+                                            <lable>Contact :</lable>
+                                            <input type="text" id="txtcontact" class="form-control" >
+                                            <span class="control-error" id="lblcontact"></span>
+                                        </div>   
+                                    </div>
+
+                                <div class="row p-1 mt-3" align="right">
+                                    <div class="form-group col-12">
+                                        <button type="button" class="btn bg-success text-white fw-bold" id="btnDAdd">Save</button>
+                                        <button type="button" class="btn bg-info text-white fw-bold" id="btnDSearch">Search</button>
+                                        <button type="button" class="btn bg-warning text-white fw-bold" id="btnDUpdate">Update</button>
+                                        <button type="button" class="btn bg-danger text-white fw-bold" id="btnDDelete">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+
+                  <div class="col-xl-7">
+                        <table class="table table-hover border mt-1" >
+                             <thead class="" style="background: #e43c5c">
+                                <tr>
+                                    <th scope="col">Driver ID</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">Contact</th>
+                                </tr>
+                             </thead>
+
+                             <tbody class="" style="background: white" id="tblDriver">
+                             </tbody>
+                        </table>
+                  </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+      </div>
+        <!-- Start Driver manage form -->
+
+        <script src="assets/js/jquery-3.5.1.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="controller/DriverController.js"></script>
+
+</body>
+</html>

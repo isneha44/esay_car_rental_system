@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Rental System | Customer Form</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/customer.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header" class="fixed-top" style="background-color: black;">
+        <div class="container d-flex align-items-center justify-content-between">
+    
+          <h1 class="logo"><a href="index.html">Easy Car Rental</a></h1>
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto" href="reserve.html" id="">Reservation</a></li>
+              <li><a class="nav-link scrollto active" href="customer.html" id="">My Details</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+
+    <!-- Start Customer screen -->
+    <div class="container-fluid" id="customer">
+        <section id="hero">
+          <div class="hero-container">
+              <div class="container-fluid mt-6" >
+                  <h1 class="" style="font-size: 30px; text-align: center; left: 865px; padding-top: 8px;"><b>Manage Your <span>Details</span></b></h1>
+                  <div class="container-fluid mt-3" id="customerform">
+                        <div class="col-xl-12">
+                            <div class="bg-white card">
+
+                                <div class="card-header text-white" style="font-size: 20px; background: #e43c5c">
+                                    Customer Form
+                                </div>
+
+                                <div class="card-body bg-white text-dark">
+                                    <div class="row p-2">
+                                        <div class="form-group col-6">
+                                            <lable>User ID :</lable>
+                                            <input type="text" id="txtUserId" class="form-control">
+                                            <span class="control-error" id="lblcusid"></span>
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <lable>Email :</lable>
+                                            <input type="text" id="txtEmail" class="form-control" >
+                                            <span class="control-error" id="lblemail"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row p-2 mt-0">
+                                        <div class="form-group col-6">
+                                            <lable>Password :</lable>
+                                            <input type="text" id="txtPassword" class="form-control" >
+                                            <span class="control-error" id="lblpassword"></span>
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <lable>Repeate Password :</lable>
+                                            <input type="text" id="txtrPassword" class="form-control" >
+                                            <span class="control-error" id="lblrpassword"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row p-2 mt-0">
+                                        <div class="form-group col-6">
+                                            <lable>Driving License Number:</lable>
+                                            <input type="text" id="txtlicense" class="form-control" >
+                                            <span class="control-error" id="lbllicense"></span>
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <lable>Contact :</lable>
+                                            <input type="text" id="txtContact" class="form-control">
+                                            <span class="control-error" id="lblcontact"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row p-2">
+                                         <div class="form-group col-12">
+                                             <lable>Address :</lable>
+                                             <input type="text" id="txtAddress" class="form-control">
+                                             <span class="control-error" id="lbladdress"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row p-1 mt-5" align="right">
+                                        <div class="form-group col-12">
+                                            <button type="button" class="btn bg-success text-white fw-bold" id="btnCustomerSearch">Get My Details</button>
+                                            <button type="button" class="btn bg-warning text-white fw-bold" id="btnCustomerUpdate">Update</button>
+                                            <button type="button" class="btn bg-danger text-white fw-bold" id="btnCustomerDelete">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+          </div>
+        </section>
+    </div>
+
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="controller/CustomerLogin.js"></script>
+
+</body>
+</html>

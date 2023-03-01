@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Rental System | Reservation</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/reserve.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Reservation screen -->
+    <header id="header" class="fixed-top" style="background-color: black;">
+        <div class="container d-flex align-items-center justify-content-between">
+    
+          <h1 class="logo"><a href="index.html">Easy Car Rental</a></h1>
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" href="reserve.html" id=">Reservation</a></li>
+              <li><a class="nav-link scrollto>" href="customer.html" id="">My Details</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+
+      <!-- Start confiromation reservation  -->
+      <div class="container-fluid" id="reaservationform">
+        <section id="hero">
+            <div class="hero-container">
+                <div class="container-fluid mt-6" >
+                    <h1 class="" style="font-size: 30px; text-align: center; left: 839px; padding-top: 8px;"><b>Confirm Your <span>Reservation</span></b></h1>
+
+                    <div class="row mt-1 p-0">
+                        <div class="col-xl-7">
+                            <div class="bg-white card">
+                            <div class="card-header text-white" style="font-size: 20px; background: #e43c5c">
+                                Manage Reservation
+                            </div>
+
+                        <div class="card-body bg-white text-dark">
+                            <div class="row p-0 mt-1">
+                                <div class="form-group col-6">
+                                    <lable>Reservation ID :</lable>
+                                    <label type="text" id="resID">R-001</label>
+                                </div>
+
+                                <div class="form-group col-6">
+                                    <lable>Date :</lable>
+                                    <label type="" id="rseDate"></label>
+                                </div>
+                            </div>
+
+                            <div class="row p-0 mt-2">
+                                <div class="form-group col-6">
+                                    <lable>Your ID :</lable>
+                                    <input type="text" id="cusID"></input>
+                                </div>
+
+                                <div class="form-group col-6">
+                                    <lable>Your Email :</lable>
+                                    <label type="" id="cusEmail"></label>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="row p-0 mt-2">
+                                <div class="form-group col-6">
+                                    <select aria-label="Default select example" class="form-select" id="cmbCarCode">
+                                        <!--  <option value="0">Car Code</option>-->
+                                        <!--  <option value="1">I001</option>-->
+                                        <!--  <option value="2">I002</option>-->
+                                        <!--  <option value="3">I003</option>-->
+                                        <!--  <option value="4">I004</option>-->
+                                    </select>
+                                    <br>
+
+                                    <select aria-label="Default select example" class="form-select" id="cmbType">
+                                        <option value="0">Car Type</option>
+                                        <option value="1">Luxury</option>
+                                        <option value="2">Premium</option>
+                                        <option value="3">General</option>
+                                    </select>
+                                </div>
+
+                                <div class="bg-white card col-6">
+                                    <div class="form-group col-12">
+                                        <lable> Name :</lable>
+                                        <label type="" id="lblvehBrand"></label>
+                                    </div>
+
+                                    <div class="form-group col-12">
+                                        <lable> Transmission :</lable>
+                                        <label type="" id="lblvehTrans"> </label>
+                                    </div>
+                                
+                                    <div class="form-group col-12">
+                                        <lable>Available :</lable>
+                                        <label type="" id="lblvehAvailable"></label>
+                                    </div>
+
+                                    <div class="form-group col-12">
+                                        <lable>Daily Rate (Rs) :</lable>
+                                        <label type="" id="lbldalyRate"></label>
+                                    </div>
+
+                                    <div class="form-group col-12">
+                                        <lable>Free Km for a Day :</lable>
+                                        <label type="" id="lbldalyFreeKm"></label>
+                                    </div>
+
+                                    <div class="form-group col-12">
+                                        <lable>Monthly Rate (Rs) :</lable>
+                                        <label type="" id="lblmonthlyRate"></label>
+                                    </div>
+
+                                    <div class="form-group col-12">
+                                        <lable>Free Km for a Month :</lable>
+                                        <label type="" id="lblmonthlyFreeKm"></label>
+                                    </div>
+
+                                    <div class="form-group col-12">
+                                        <lable>Price per Extra Km (Rs) :</lable>
+                                        <label type="" id="lblextraprice"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="row p-0 mt-2">
+                                <div class="form-check col-6">
+                                    <label for="pickup">Pick Up :</label>
+                                    <input type="date" id="pickup" name="pickup">
+                                </div>
+
+                                <div class="form-check col-6" >
+                                    <label for="Return">Return :</label>
+                                    <input type="date" id="return" name="return">
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="row p-0 mt-4">
+                                <div class="form-group col-4">
+                                    <lable> Loss Damage Waiver :</lable>
+                                </div>
+
+                                <div class="form-group col-8">
+                                    <input class="form-control form-control-sm" id="formFileSm" type="file">
+                                </div>
+
+                                <p style="font-size: 10px;">*Upload the bank slip</p>
+
+                                <p style="font-size: 10px;">(Loss Damage Waiver payment for is 10,000.00 LKR for
+                                            general cars, 15,000.00 LKR for Premium cars, and 20,000.00 LKR for Luxury cars, It will be returned to the customer after
+                                            handing over the car or if the customer cancels the rental request.)</p>
+                            </div>
+
+                            <div class="form-group col-12">
+                                <a href="customerlogin.html" class="btn-service scrollto" id="btnReserve">RESERVE NOW</a>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-xl-4">
+                            <div class="bg-white card">
+                                <div class="card-header" style="font-size: 20px; background: #ffffff; color: #e43c5c;">
+                                    Driver Details
+                                </div>
+
+                                <div class="row p-0 mt-2">
+                                    <div class="form-check col-6" id="cheqbox1">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1" >With Driver</label>
+                                    </div>
+
+                                    <div class="form-check col-6" >
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">Without Driver</label>
+                                    </div>
+                                </div>
+                                <br>
+
+                                <div class="row p-0 mt-1">
+                                    <div class="form-check col-3">
+                                        <lable> Driver Id :</lable>
+                                    </div>
+
+                                    <div class="form-check col-8">
+                                        <select aria-label="Default select example" class="form-select" id="cmbDriverId"></select>
+                                    </div>
+                                </div>
+
+                                <div class="row p-0 mt-1">
+                                    <div class="form-check col-3">
+                                        <lable>Name :</lable>
+                                    </div>
+
+                                    <div class="form-check col-8">
+                                        <lable id="lblDriverName"></lable>
+                                    </div>
+                                </div>
+
+                                <div class="row p-0 mt-1">
+                                    <div class="form-check col-3">
+                                        <lable>Contact :</lable>
+                                    </div>
+
+                                    <div class="form-check col-8">
+                                        <lable id="lblDContact"></lable>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4" style="position: absolute; top: 300px; right: 115px;">
+                            <div class="bg-white card">
+                                <div class="card-header" style="font-size: 20px; background: #ffffff; color: #e43c5c;">
+                                    Reservation Summary
+                                </div>
+
+                                <div class="form-group col-12">
+                                    <lable>Daily Total :</lable>
+                                    <label type="" id="carCode"></label>
+                                </div>
+
+                                <div class="form-group col-12">
+                                    <lable>Monthly Total :</lable>
+                                    <label type="" id="vehBrand"></label>
+                                </div>
+
+                                <div class="form-group col-12">
+                                    <lable> Qty :</lable>
+                                    <label type="" id="qty"></label>
+                                </div>
+
+                                <div class="form-group col-12">
+                                    <lable>Extra Km :</lable>
+                                    <label type="" id="extra"></label>
+                                </div>
+
+                                <div class="form-group col-12">
+                                    <lable>Time Range :</lable>
+                                    <label type="" id="timeRange"></label>
+                                </div>
+                                <hr>
+
+                                <div class="form-group col-12 bg-warning" style="height: 64px; font-size: 25px;">
+                                    <div style="position:relative; top: 14px; left: 53px;">
+                                        <lable>Total (Rs) :</lable>
+                                        <label type="" id="total"></label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-12">
+                                    <a href="index.html" class="btn-complete scrollto">COMPLETE RESERVATION</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </div>
+    <!-- Start confiromation reservation  -->
+
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="controller/RentController.js"></script>
+
+</body>
+</html>
