@@ -34,7 +34,7 @@ body {
     line-height: 1.6;
 }
 a {
-    color: #e43c5c;
+    color: #7FFF00;
     text-decoration: none;
 }
 a:hover {
@@ -1973,7 +1973,7 @@ section {
 }
 
 #footer .social-links a:hover {
-    background: #d01d3f;
+    background: #7FFF00;
     color: #fff;
     text-decoration: none;
 }
